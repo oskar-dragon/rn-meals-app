@@ -1,9 +1,9 @@
  #!/bin/zsh
-declare -a simulators=("F7C013EB-8176-4762-A8D7-67299DECA20A" "EC1BF74B-D333-469B-8E2B-6A4765630570" "5621317B-9029-4136-A418-23498F08A7F2" )
+declare -a iosSimulators=("F7C013EB-8176-4762-A8D7-67299DECA20A" "EC1BF74B-D333-469B-8E2B-6A4765630570" "5621317B-9029-4136-A418-23498F08A7F2" )
 echo "STARTED"
 open -a Simulator
 wait_time=1
-for i in "${simulators[@]}"
+for i in "${iosSimulators[@]}"
 do
     echo "Boot $i"
     xcrun simctl boot $i
@@ -16,3 +16,14 @@ do
     sleep $wait_time
 done
 echo "FINISHED"
+
+
+# declare -s androidSimulators=("Pixel_7_Pro_API_34")
+
+# for j in "${androidSimulators[@]}"
+# do
+#     echo "Boot $j"
+#     emulator j
+#     sleep $wait_time
+#     echo "Install Expo"
+

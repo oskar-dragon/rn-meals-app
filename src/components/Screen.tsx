@@ -3,7 +3,7 @@ import { TWPropsWithChildren } from './types';
 import { tv } from 'tailwind-variants';
 
 const styles = tv({
-  base: 'flex-1 items-center justify-center px-4 bg-amber-950/85',
+  base: 'flex-1 bg-amber-950/85',
 });
 
 export function Screen({ children, className }: TWPropsWithChildren) {

@@ -4,6 +4,9 @@ module.exports = {
   presets: [require('nativewind/preset')],
   theme: {
     extend: {
+      screens: {
+        sm: '120',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

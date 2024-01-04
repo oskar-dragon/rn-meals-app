@@ -1,12 +1,11 @@
-import { PropsWithChildren } from 'react';
 import { Pressable, PressableProps, Text, View } from 'react-native';
 import { tv } from 'tailwind-variants';
 import { TWPropsWithChildren } from './types';
 
 const styles = tv({
   slots: {
-    base: 'h-[150] w-[150] items-center justify-center rounded-lg bg-red-700 shadow',
-    text: 'text-1xl font-bold',
+    base: 'aspect-square w-5/12 android:overflow-hidden items-center justify-center rounded-lg shadow active:opacity-70',
+    text: 'text-2xl font-bold',
   },
 });
 
@@ -18,8 +17,8 @@ export function CategoryCard({
   const { base, text } = styles();
 
   return (
-    <Pressable {...restProps}>
-      <View className={base({ class: className })}>
+    <Pressable {...restProps} className={base({ class: className })}>
+      <View className="overflow-hidden">
         <Text className={text()}>{children}</Text>
       </View>
     </Pressable>
